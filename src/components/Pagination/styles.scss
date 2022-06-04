@@ -6,7 +6,6 @@
 
   button {
     background-color: whitesmoke;
-    border-radius: 2rem;
     color: black;
     cursor: pointer;
     height: 2rem;
@@ -14,7 +13,7 @@
     min-width: 2rem;
   }
   :hover {
-    background-color: rgb(0, 255, 140);
+    background-color: rgb(0, 136, 255);
   }
   :disabled {
     background-color: rgb(255, 255, 255);
