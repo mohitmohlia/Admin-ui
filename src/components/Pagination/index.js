@@ -1,7 +1,8 @@
 import React from "react";
+import PropTypes from "prop-types";
 import "./styles.scss";
 
-function Pagination({ pageCount, onPageChange, pageNumber }) {
+function Pagination({ onPageChange, pageCount, pageNumber }) {
   return (
     <div className="admin-ui-pagination">
       <button onClick={() => onPageChange(0)}>{"<<"}</button>
@@ -35,5 +36,9 @@ function Pagination({ pageCount, onPageChange, pageNumber }) {
     </div>
   );
 }
-
+Pagination.prototype = {
+  onPageChange: PropTypes.func,
+  pageCount: PropTypes.number,
+  pageNumber: PropTypes.number,
+};
 export default Pagination;
