@@ -122,50 +122,50 @@ function Table() {
   return (
     <div className="admin-ui-container">
       <input
-        placeholder="Search..."
         className="search-input"
-        type="text"
         onChange={handleSearch}
+        placeholder="Search..."
         ref={inputRef}
+        type="text"
       />
       <AntDTable
-        rowSelection={rowSelection}
         columns={columns}
         dataSource={data}
-        pagination={false}
         loading={isLoading}
+        pagination={false}
+        rowSelection={rowSelection}
       />
       <div className="admin-ui-pagination-container">
         {selectedRowKeys.length >= 1 && (
           <DeleteFilled onClick={handleDelete} className="delete-button" />
         )}
         <Pagination
-          pageCount={pageCount}
           onPageChange={handlePageChange}
+          pageCount={pageCount}
           pageNumber={pageNumber}
         />
       </div>
       <Modal
-        title="Edit Row"
-        visible={isModalOpen}
         onCancel={() => setModalOpen(false)}
         onOk={handleModalSubmit}
+        title="Edit Row"
+        visible={isModalOpen}
       >
         <form className="form-edit-container">
           <input
+            onChange={(e) => setName(e.target.value)}
             placeholder="Name"
             value={name}
-            onChange={(e) => setName(e.target.value)}
           />
           <input
+            onChange={(e) => setEmail(e.target.value)}
             placeholder="Email"
             value={email}
-            onChange={(e) => setEmail(e.target.value)}
           />
           <input
+            onChange={(e) => setRole(e.target.value)}
             placeholder="Role"
             value={role}
-            onChange={(e) => setRole(e.target.value)}
           />
         </form>
       </Modal>
