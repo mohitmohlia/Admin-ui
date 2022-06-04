@@ -11,6 +11,8 @@
   }
 
   .search-input {
+    background-color: #ffffff5c;
+    border: none;
     border-radius: 2rem;
     font-size: 1.5rem;
     height: 2.5rem;
@@ -36,6 +38,12 @@
               color: rgb(0, 136, 255);
             }
           }
+        }
+        .dark-row {
+          background: rgb(233, 232, 232);
+        }
+        .light-row {
+          background: whitesmoke;
         }
       }
     }

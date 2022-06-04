@@ -133,6 +133,9 @@ function Table() {
         dataSource={data}
         loading={isLoading}
         pagination={false}
+        rowClassName={(record, index) =>
+          index % 2 === 0 ? "dark-row" : "light-row"
+        }
         rowSelection={rowSelection}
       />
       <div className="admin-ui-pagination-container">

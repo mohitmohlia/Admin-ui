@@ -10,7 +10,7 @@ function Pagination({ onPageChange, pageCount, pageNumber }) {
         disabled={pageNumber === 0}
         onClick={() => onPageChange(pageNumber - 1)}
       >
-        Previous
+        {"<"}
       </button>
       {Array(pageCount)
         .fill()
@@ -30,7 +30,7 @@ function Pagination({ onPageChange, pageCount, pageNumber }) {
         disabled={pageCount === pageNumber + 1}
         onClick={() => onPageChange(pageNumber + 1)}
       >
-        Next
+        {">"}
       </button>
       <button onClick={() => onPageChange(pageCount - 1)}>{">>"}</button>
     </div>
